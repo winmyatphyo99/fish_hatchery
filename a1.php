@@ -1,4 +1,6 @@
-<?php require('connection.php');?>
+<?php
+ob_start();
+require('connection.php'); ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -41,10 +43,14 @@
             color: #000;
         }
 
+
+
+
+
         .menu-item {
-            margin: 0 0 20px 0;
+             margin: 0 0 20px 0; 
             position: relative;
-            /* Ensure dropdown aligns correctly */
+
         }
 
         .menu-item a {
@@ -53,9 +59,11 @@
             display: flex;
             align-items: center;
             font-size: 16px;
+            
         }
 
         .menu-item a:hover {
+           
             color: #f0ffff;
         }
 

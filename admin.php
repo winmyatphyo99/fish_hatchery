@@ -28,7 +28,7 @@
             <div class="card card-signin my-5">
                 <div class="card-body">
                     <h5 class="card-title text-center">Admin Login Panel</h5>
-                    <form class="form-signin" action="ex.php" method="POST">
+                    <form class="form-signin" action="aaaa.php" method="POST">
                         <div class="form-label-group">
                             <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
                             <label for="inputEmail">Email address</label>

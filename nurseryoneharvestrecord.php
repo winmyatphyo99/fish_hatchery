@@ -13,7 +13,7 @@
 <?php
 require_once("a1.php");
 
-$sql = "SELECT * FROM nurserytwo";
+$sql = "SELECT * FROM nurseryoneharvestrecord";
 $result = $conn->query($sql);
 ?>
 
@@ -33,7 +33,7 @@ $result = $conn->query($sql);
                 </div>
 
                 <div class="btn btn-primary fw-bold " style="margin-left:80vh;padding-top:15px;" onclick="openOptions('brand', 'add-new-brand', false, null)">
-                    <a href="aaaa.php" style="text-decoration:none; color:#fff;">Add New Transfer Record</a>
+                    <a href="nurseryoneharvest.php" style="text-decoration:none; color:#fff;">Add New Harvest Record</a>
                 </div>
 
 
@@ -43,21 +43,18 @@ $result = $conn->query($sql);
                 <table class="table table-bordered table-hover">
                     <thead>
                         <tr>
-                            <th class="text-center">Sr.No</th>
+                            <th class="text-center">Sr.no</th>
                             <th class="text-center">Hatchery Code</th>
-                            <th class="text-center">Tank No</th>
+                            <th class="text-center">Pond No</th>
                             <th class="text-center">Stocking Date</th>
-                            <th class="text-center">Stocking pcs</th>
-                            <th class="text-center">Stocking Size(g)</th>
-                            <th class="text-center">Day of Culture</th>
+                            <th class="text-center">Stocking Pcs Million</th>
+                            <th class="text-center">Age</th>
                             <th class="text-center">Harvest Date</th>
-                            <th class="text-center">To</th>
-                            <th class="text-center">Harvest pcs</th>
+                            <th class="text-center">To Transfer</th>
+                            <th class="text-center">Harvest Pcs</th>
                             <th class="text-center">Harvest Size(g)</th>
                             <th class="text-center">Sizing(%)</th>
-                            <th class="text-center">Total Initial Weight(kg)</th>
                             <th class="text-center">Total Harvest Weight(kg)</th>
-
                         </tr>
                     </thead>
                     <tbody id="table-body">
@@ -65,24 +62,22 @@ $result = $conn->query($sql);
                         if ($result->num_rows > 0) {
                             while ($row = $result->fetch_assoc()) {
                                 echo "<tr>
-                <td>{$row['nurserytwo_id']}</td>
+                <td>{$row['nursery_id']}</td>
                 <td>{$row['hatchery_code']}</td>
-                <td>{$row['tank_no']}</td>
+                <td>{$row['pond_no']}</td>
                 <td>{$row['stocking_date']}</td>
-                <td>{$row['stocking_pcs']}</td>
-                <td>{$row['stocking_size']}</td>
-                <td>{$row['dayof_culture']}</td>
+                <td>{$row['stocking_pcs_million']}</td>
+                <td>{$row['age']}</td>
                 <td>{$row['harvest_date']}</td>
-                <td>{$row['transfer_to']}</td>
+                <td>{$row['to_harvest']}</td>
                 <td>{$row['harvest_pcs']}</td>
                 <td>{$row['harvest_size']}</td>
                 <td>{$row['sizing']}</td>
-                <td>{$row['total_initial_weight']}</td>
                 <td>{$row['total_harvest_weight']}</td>
             </tr>";
                             }
                         } else {
-                            echo "<tr><td colspan='14' class='text-center'>No records found</td></tr>";
+                            echo "<tr><td colspan='12' class='text-center'>No records found</td></tr>";
                         }
                         ?>
                     </tbody>
@@ -97,7 +92,7 @@ $result = $conn->query($sql);
 
 
     </div>
-    <script src="./static/js/Brand.js"></script>
+
 </body>
 
 </html>

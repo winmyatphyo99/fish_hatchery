@@ -33,7 +33,7 @@
             VALUES ('$nurserytwo_id', '$hatchery_code', '$tank_no', '$stocking_date', '$stocking_pcs', '$stocking_size', '$dayof_culture', '$harvest_date', '$transfer_to', '$harvest_pcs', '$harvest_size', '$sizing', '$total_initial_weight', '$total_harvest_weight')";
 
     if ($conn->query($sql) === TRUE) {
-      //  header("Location:transfer.php"); // Redirect to transfer.php after saving
+      header("Location:nurserytwotransferrecord.php"); // Redirect to transfer.php after saving
       exit();
     } else {
       echo "Error: " . $sql . "<br>" . $conn->error;
@@ -47,7 +47,7 @@
   <div class="container " style="padding-left:60px;padding-top:100px;">
     <main class=" h-100 bg-light rounded-3 shadow-lg p-4 " style=" width:115%;">
       <h2 class="text-center mb-4">Nursery II Tank To Tank Transfer Record</h2>
-      <form action="aaaa.php" method="POST">
+      <form action="nurserytwotransfer.php" method="POST">
 
         <!-- Row 1 -->
         <div class="form-row">
